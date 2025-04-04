@@ -14,7 +14,7 @@ import {
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://192.168.200.66:3001' // Android 에뮬레이터/실제 기기의 경우
+  baseURL: 'http://ambion.duckdns.org:3007' // Android 에뮬레이터/실제 기기의 경우
 });
 
 // 사용 예
@@ -40,7 +40,7 @@ const App = () => {
       setIsLoading(true);
       // 에뮬레이터나 디바이스에 따라 IP 주소를 변경해야 할 수 있습니다
       // 에뮬레이터: 10.0.2.2, 같은 네트워크의 실제 디바이스: 컴퓨터의 IP 주소
-      const serverUrl = 'http://192.168.200.66:3001/api/chat';
+      const serverUrl = 'http://ambion.duckdns.org:3007/chat';
       
       const response = await axios.post(serverUrl, {
         message: userMessage
